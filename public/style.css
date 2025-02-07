@@ -1,0 +1,79 @@
+#home {
+  text-align: center;
+  padding-top: 50px;
+}
+
+#chat {
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+#sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+#userList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#chatArea {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+#messages {
+  height: 80%;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+}
+
+#messageInput {
+  width: 80%;
+}
+
+#sendMessageBtn {
+  width: 18%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #chat {
+    flex-direction: column; /* Stack the sidebar and chat area */
+  }
+
+  #sidebar {
+    width: 100%; /* Sidebar takes full width on mobile */
+    padding: 15px 10px;
+  }
+
+  #chatArea {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #messages {
+    height: 60%; /* Reduce message area height to fit mobile */
+  }
+
+  #messageInput {
+    width: 70%; /* Adjust input width for better mobile view */
+  }
+
+  #sendMessageBtn {
+    width: 25%; /* Adjust button width */
+  }
+}
+
+@media (max-width: 480px) {
+  #messageInput {
+    width: 65%; /* Further adjust input width for smaller screens */
+  }
+
+  #sendMessageBtn {
+    width: 30%; /* Adjust button width */
+  }
+}
